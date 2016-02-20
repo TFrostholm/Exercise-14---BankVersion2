@@ -16,12 +16,34 @@ namespace Sandbox
 
         public void Deposit(double amount)
         {
-            balance = balance + amount;
+            if (amount > 0)
+            {
+                balance = balance + amount;
+            }
+            else
+            {
+                Console.WriteLine("You can not deposit 0 or a negative number");
+            }
+            
         }
 
         public void Withdraw(double amount)
         {
-            balance = balance - amount;
+            if (amount > 0)
+            {
+                if (amount <= balance)
+                {
+                    balance = balance - amount;
+                }
+                else
+                {
+                    Console.WriteLine("Insufficent funds");
+                }
+            }
+            else
+            {
+                Console.WriteLine("You can not withdraw 0 or a negative number");
+            }
         }
 
         public double GetBalance()

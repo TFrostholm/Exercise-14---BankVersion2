@@ -15,6 +15,15 @@ namespace Sandbox
             myAccount.GetBalance();
             Console.WriteLine("Balance is now : {0}", myAccount.GetBalance());
 
+            myAccount.Deposit(2000);
+            Console.WriteLine("Balance is now : {0}", myAccount.GetBalance());
+
+            myAccount.Withdraw(1900);
+            Console.WriteLine("Balance is now : {0}", myAccount.GetBalance());
+
+            myAccount.Deposit(-100);
+            Console.WriteLine("Balance is now : {0}", myAccount.GetBalance());
+
 
             // The LAST line of code should be ABOVE this line
         }
